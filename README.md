@@ -1,6 +1,6 @@
 # Vendor Management Made Easy
 
-##Streamline your vendor management with this Django and Django REST Framework based system! It empowers you to:
+## Streamline your vendor management with this Django and Django REST Framework based system! It empowers you to:
 - Create and manage vendor profiles
 - Track purchase orders efficiently
 - Gain insights into vendor performance
@@ -16,7 +16,7 @@
 
 # 1. Clone the repository:
    bash:  
-   git clone https://github.com/WaghmareDeepali/Vendor_management_system.git  
+   git clone https://github.com/WaghmareDeepali/VMS  
    cd VMS  
 
 # 2.Create a virtual environment:
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python manage.py makemigrations  
 python manage.py migrate  
 
-##Runserver
+## Runserver
 # 1.Start the server:
 python manage.py runserver 
 - http://127.0.0.1:8000/ 
@@ -43,7 +43,7 @@ Purchase Order API: /purchase-order/
 Historical Performance API: /vendor/historical_performance  
 
 # Access Token  
-1. '/gettoken/' #provide username and password in json eg. { "username":"deep","password":"deepali@123" }  
+1. '/gettoken/' # provide username and password in json eg. { "username":"deep","password":"deepali@123" }  
    I used Postman to test API  
 # once Token is created or received provide it to 
 2. HEADER  
@@ -73,16 +73,18 @@ Purchase Order API
 ![specific purchase order](image-5.png)
 ![update purchase order](image-7.png)
 ![Delete order](image-6.png)
-Vendor Performance Evaluation  
+
+
+## Vendor Performance Evaluation  
 ● GET /api/vendors/{vendor_id}/performance: Retrieve a vendor's performance metrics  
 
-Historical Performance API  
+## Historical Performance API  
 GET /vendor/historical_performance: List historical performance for all vendors.
 ![histrorical performance all vendors](image-8.png)  
 GET /vendor/historical_performance/{id}/: Retrieve historical performance for a specific vendor.  
 ![historical performance particular vendor](image-9.png)
 
-Update Acknowledgment Endpoint:  
+## Update Acknowledgment Endpoint:  
 ● While not explicitly detailed in the previous sections, consider an endpoint like  
 POST /api/purchase-orders/{po_id}/acknowledge for vendors to acknowledge POs.  
 ● This endpoint will update acknowledgment_date and trigger the recalculationof average_response_time  
